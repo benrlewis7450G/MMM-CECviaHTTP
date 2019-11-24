@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# MMM-CECviaHTTP
 =======
 # MMM-CECviaHTTP
 
@@ -14,5 +12,18 @@ cd ~/MagicMirror/modules
 
 Clone this repository:
 ````
-git clone 
->>>>>>> initial commit
+git clone https://github.com/benrlewis7450G/MMM-CECviaHTTP
+````
+
+Configure the module in your `config.js` file.
+
+## Using the module
+
+To use this module, add it to the modules array in the `config/config.js` file:
+````javascript
+modules: [
+	{
+		module: 'MMM-CECviaHTTP'
+	}
+] 
+````
