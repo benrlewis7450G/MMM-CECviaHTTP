@@ -15,33 +15,34 @@ module.exports = NodeHelper.create({
 	start: function() {
 		this.expressApp.get('/CECon', (req, res) => {
 			cec = new cecController()
-			cecCtl.on('ready', readyHandler);
-			cecCtl.on('error', console.error);
+			cec.on('ready', readyHandler);
+			cec.on('error', console.error);
 
 			function readyHandler(controller){
 				console.log('Attempting to turn on TV');
 				controller.dev0.turnOn().then(() => {
-					res.send("status": "on");
+					res.send({"status": "on"});
 				});
 			}
 		});
 
 		this.expressApp.get('/CECoff', (req,res) => {
 			cec = new cecController()
-			cecCtl.on('ready', readyHandler);
-			cecCtl.on('error', console.error);
+			cec.on('ready', readyHandler);
+			cec.on('error', console.error);
 
 			function readyHandler(controller){
 				console.log('Attempting to turn off TV');
 				controller.dev0.turnOff().then(() => {
 					res.send({"status": "off"});
 				});
+			}
 		});
 
 		this.expressApp.get('/CECstatus', (req,res) => {
 			cec = new cecController()
-			cecCtl.on('ready', readyHandler);
-			cecCtl.on('error', console.error);
+			cec.on('ready', readyHandler);
+			cec.on('error', console.error);
 
 			function readyHandler(controller){
 				console.log('Attempting to retrieve TV status');

@@ -33,3 +33,13 @@ modules: [
 	}
 ] 
 ````
+
+To turn HDMI display off:
+````
+http://MM.IP.ADDRESS:PORT/CECoff
+````
+
+To turn HDMI display on:
+````
+http://MM.IP.ADDRESS:PORT/CECon
+````
