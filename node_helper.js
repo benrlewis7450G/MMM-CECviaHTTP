@@ -34,7 +34,7 @@ module.exports = NodeHelper.create({
 			function readyHandler(controller){
 				console.log('Attempting to turn off TV');
 				controller.dev0.turnOff().then(() => {
-					res.send("status": "off");
+					res.send({"status": "off"});
 				});
 		});
 
