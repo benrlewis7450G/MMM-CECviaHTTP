@@ -15,6 +15,12 @@ Clone this repository:
 git clone https://github.com/benrlewis7450G/MMM-CECviaHTTP
 ````
 
+Install
+````
+cd MMM-CECviaHTTP
+npm install
+````
+
 Configure the module in your `config.js` file.
 
 ## Using the module
